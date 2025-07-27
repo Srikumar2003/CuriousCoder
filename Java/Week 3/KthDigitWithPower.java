@@ -43,3 +43,23 @@ class Main {
        
     }
 }
+
+(or)
+
+<Alternate solution>
+
+import java.util.Scanner;
+
+public class Kthdigitofanumber {
+    public static void main(String[] args) {
+        Scanner in  = new Scanner(System.in);
+        int A = in.nextInt();
+        int B = in.nextInt();
+        int k = in.nextInt();
+        long p = (long)Math.pow(A,B);
+        for(int i = 1; i < k; i++){
+            p = p/10;
+        }
+        System.out.println(p%10);
+    }
+}
